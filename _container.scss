@@ -1,0 +1,10 @@
+#container1 {
+  @include viewport();
+  @include flexCenter(column);
+  background-color: #840032;
+}
+
+#container2 {
+  @include viewport();
+  @include flexCenter(column);
+}

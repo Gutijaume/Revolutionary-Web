@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de contacto</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">BIENVENIDO A LA REVOLUCIÓN</h1>
+
+    <form autocomplete="off" action="https://reqres.in/api/users" method="post">
+      <fieldset>
+        <legend>Datos del revolucionario:</legend>
+
+        <label for="fname">Nombre:</label>
+        <input type="text" id="fname" name="fname" required />
+
+        <label for="lname">Apellido:</label>
+        <input type="text" id="lname" name="lname" required />
+
+        <label for="city">¿En qué ciudad comenzarás la revolución?</label>
+        <select id="city" name="city">
+          <option value="madrid">Madrid</option>
+          <option value="barcelona">Barcelona</option>
+          <option value="valencia">Valencia</option>
+          <option value="sevilla">Sevilla</option>
+        </select>
+
+        <label for="udate">Fecha de nacimiento:</label>
+        <input type = date id="udate" name="udate"/>
+        <br />
+        <label for="user">Usuario:</label>
+        <input 
+        type="text" 
+        id="user" 
+        name="user"
+        pattern="[A-Za-z0-9]{5,20}"
+        placeholder="Mínimo 5 carácteres"
+        />
+            
+        <label for="email">Email:</label>
+        <input type="email"
+        id="uemail"
+        name="uemail"
+        pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" 
+        />
+
+        <label for="pwd">Password:</label>
+        <input 
+        type="password" 
+        id="pwd" 
+        name="pwd"
+        placeholder="Inserta entre 4 y 10 carácteres"
+        minlength="4"
+        maxlength="10"
+        />
+
+        <label for="fcolor">Selecciona el color de tu uniforme:</label>
+        <input type = "color" id="fcolor" name="fcolor"/>
+        <br />
+        <textarea
+        id="message"
+        name="message"
+        placeholder="Escribe tu grito de guerra"
+        rows="10"
+        cols="30"
+        ></textarea>        
+      </fieldset>
+      <div style="background-color: crimson">
+        <img src="./imagenes/encapuchado.jpg" alt="observando" width="600"; style="border:5px solid black; float:right"/>
+            </div>
+
+      <fieldset>
+          <legend>Preferencias</legend>
+
+          <label for="exp">¿Tienes experiencia revolucionaria?</label>
+          <input type="checkbox" id="exp" name="exp"/>
+          <br />
+
+          <label for="favweapon">Selecciona tu arma favorita para hacer la revolución</label>
+          <br />
+          <label for="escopeta">
+            <img src="./imagenes/ESCOPETA.jpg" alt="escopeta" width="300" />
+            <input type="radio" id="escopeta" value="escopeta" name="favweapon" /> ESCOPETA
+            <br />
+            
+            <label for="ak47">
+                <img src="./imagenes/AK47.jpg" alt="ak47" width="300" />
+              <input type="radio" id="ak47" value="ak47" name="favweapon" /> AK47
+              <br />
+
+              <label for="katana">
+                <img src="./imagenes/KATANA.jpg" alt="katana" width="300" />
+                <input type="radio" id="katana" value="katana" name="favweapon" /> KATANA
+          </label>
+      </fieldset>
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
